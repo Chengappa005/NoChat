@@ -76,9 +76,6 @@ public class MessageCollectionViewCell<BubbleViewT where
     
     var messageViewModel: MessageViewModelProtocol! {
         willSet {
-            
-//            print("wll set. message view model=\(newValue?.message.content), cell=\(self)")
-            
             if messageViewModel !== newValue {
                 guard let viewModel = messageViewModel as? DecoratedMessageViewModelProtocol else {
                     return
@@ -87,9 +84,6 @@ public class MessageCollectionViewCell<BubbleViewT where
             }
         }
         didSet {
-            
-//            print("did set message view model=\(messageViewModel?.message.content), cell=\(self)")
-            
             updateViews()
             bubbleView.messageViewModel = messageViewModel
             
@@ -260,7 +254,7 @@ public class MessageCollectionViewCell<BubbleViewT where
     }
     
     // http://stackoverflow.com/questions/22451793/setcollectionviewlayoutanimated-causing-debug-error-snapshotting-a-view-that-h
-    public override func snapshotViewAfterScreenUpdates(afterUpdates: Bool) -> UIView {
+    public override func snapshotViewAfterScreenUpdates(afterUpdates: Bool) -> UIView? {
         UIGraphicsBeginImageContext(bounds.size)
         
         drawRect(bounds)

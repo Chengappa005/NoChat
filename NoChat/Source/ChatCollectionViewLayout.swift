@@ -41,6 +41,10 @@ public struct ChatCollectionViewLayoutModel {
 
         var verticalOffset: CGFloat = 0
         for (index, layoutData) in itemsLayoutData.enumerate() {
+            // fix for iOS 10
+            guard collectionViewWidth > 0 else {
+                continue
+            }
             let indexPath = NSIndexPath(forItem: index, inSection: 0)
             let (height, bottomMargin) = layoutData
             let itemSize = CGSize(width: collectionViewWidth, height: height)

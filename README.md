@@ -20,7 +20,8 @@ These companion frameworks are just different user interface, you can custom you
 
 ## Requirements
 - iOS 8.0+
-- Xcode 7.3 or above
+- Xcode 8.0+
+- Swift 2.3
 
 ## Install
 ### CocoaPods
