@@ -84,6 +84,7 @@ public class ChatInputViewController: UIViewController, ChatInputControllerProto
         view.addSubview(inputBar)
         
         backgroundView = UIToolbar()
+        backgroundView.translucent = false
         inputBar.addSubview(backgroundView)
     }
     

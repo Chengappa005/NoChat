@@ -29,8 +29,9 @@ class ChatsViewController: UITableViewController {
             let chatVC = TGChatViewController()
             chatVC.chatItemsDecorator = chatItemsDecorator
             chatVC.chatDataSource = demoDataSource
-            
             chatVC.title = title
+            chatVC.hidesBottomBarWhenPushed = true
+            
             navigationController?.pushViewController(chatVC, animated: true)
             
         case "WeChat":
@@ -43,8 +44,9 @@ class ChatsViewController: UITableViewController {
             let chatVC = MMChatViewController()
             chatVC.chatItemsDecorator = chatItemsDecorator
             chatVC.chatDataSource = demoDataSource
-            
             chatVC.title = title
+            chatVC.hidesBottomBarWhenPushed = true
+            
             navigationController?.pushViewController(chatVC, animated: true)
             
         case "Slack":
@@ -57,8 +59,9 @@ class ChatsViewController: UITableViewController {
             let chatVC = SLKChatViewController()
             chatVC.chatItemsDecorator = chatItemsDecorator
             chatVC.chatDataSource = demoDataSource
-            
             chatVC.title = title
+            chatVC.hidesBottomBarWhenPushed = true
+            
             navigationController?.pushViewController(chatVC, animated: true)
             
         default:
